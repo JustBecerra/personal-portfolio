@@ -1,1 +1,1 @@
-export const ButtonNames = ["About me", "Technologies", "Projects"];
+export const ButtonNames = ["Home", "Technologies", "Projects"];

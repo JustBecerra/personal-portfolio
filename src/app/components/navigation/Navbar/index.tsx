@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <AppBar position="static" className="bg-transparent">
       <Toolbar disableGutters>
-        <Box className="ml-[3%] flex flex-row gap-x-2" width="100%">
+        <Box className="ml-[3%] w-[100%] flex flex-row gap-x-2">
           <Switch onClick={() => setTranslate((prev) => !prev)} />
           <Image
             src={!translate ? britishflag : spanishflag}
