@@ -6,6 +6,7 @@ import { ButtonNames } from "../../../misc";
 import Image from "next/image";
 import britishflag from "../../../../public/britishflag.png";
 import spanishflag from "../../../../public/spanishflag.png";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [translate, setTranslate] = useState(false);
@@ -20,11 +21,15 @@ export const Navbar = () => {
             width={38}
             height={30}
           />
-          {ButtonNames.map((name, index) => (
-            <Button className="text-white" key={index}>
-              {name}
-            </Button>
-          ))}
+          <Link href="/">
+            <Button className="text-white">Home</Button>
+          </Link>
+          <Link href="/technologies">
+            <Button className="text-white">Technologies</Button>
+          </Link>
+          <Link href="/projects">
+            <Button className="text-white">Projects</Button>
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

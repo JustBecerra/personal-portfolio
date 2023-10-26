@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 export const Information = () => {
   return (
-    <Box className="flex w-[85%] h-auto flex-row justify-center items-center m-auto mt-[5%] gap-[10%]">
+    <Box className="flex w-[85%] h-auto flex-row justify-center items-center mt-[5%] gap-[10%]">
       <Box className="w-[40%] h-[40%]">
         <Image src={sonriente} alt="" style={{ borderRadius: "1rem" }} />
       </Box>
