@@ -4,8 +4,8 @@ import AppBar from "@mui/material/AppBar";
 import { Box, Button, Switch, Toolbar } from "@mui/material";
 import { ButtonNames } from "../../../misc";
 import Image from "next/image";
-import britishflag from "../../../imgs/britishflag.png";
-import spanishflag from "../../../imgs/spanishflag.png";
+import britishflag from "../../../../public/britishflag.png";
+import spanishflag from "../../../../public/spanishflag.png";
 
 export const Navbar = () => {
   const [translate, setTranslate] = useState(false);

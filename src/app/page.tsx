@@ -1,24 +1,11 @@
-import { Box, Typography } from "@mui/material";
-import { Navbar } from "./components/navigation/Navbar";
+import { Information } from "../components/Information";
 import Image from "next/image";
-import sonriente from "./imgs/sonriente.jpg";
-import { Information } from "./components/Information";
-
+import nightRoad from "../../public/night-road.jpg";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <Box
-        className="bg-[url('../app/imgs/night-road.jpg')]"
-        sx={{
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        width="100vw"
-        height="100vh"
-      >
-        <Navbar />
-        <Information />
-      </Box>
+      <Image src={nightRoad} quality={100} alt="" fill />
+      <Information />
     </main>
   );
 }
