@@ -2,7 +2,7 @@ import { Box, Grid, Paper, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-type technologiesType = {
+type technologiesProps = {
   name: string;
   icon: StaticImageData;
   area: string;
@@ -13,7 +13,7 @@ export const Technologies = ({
   technologies,
   title,
 }: {
-  technologies: technologiesType[];
+  technologies: technologiesProps[];
   title: string;
 }) => {
   return (
