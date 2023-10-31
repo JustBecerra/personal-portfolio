@@ -16,8 +16,8 @@ import {
 
 export default function projects() {
   return (
-    <main className="flex flex-col items-center justify-center">
-      <Box className="w-[80%] mt-[3%] flex flex-row justify-center items-center gap-[1rem]">
+    <main className="flex flex-col h-[90%] items-center justify-center">
+      <Box className="w-[80%] flex flex-row justify-center items-center gap-[1rem]">
         <ProjectCard
           title={"Huellitas"}
           screenshot={huellitasSH}

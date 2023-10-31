@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -24,11 +25,13 @@ export const ProjectCard = ({
   description,
 }: props) => {
   return (
-    <Card variant="outlined">
+    <Card className="h-[100%] flex flex-col justify-between" variant="outlined">
       <CardContent>
         <Image src={screenshot} alt="" />
-        <Typography>{title}</Typography>
-        <Typography>{description}</Typography>
+        <Box className="mt-2">
+          <Typography>{title}</Typography>
+          <Typography className="mt-4">{description}</Typography>
+        </Box>
       </CardContent>
       <CardActions>
         {url && (
