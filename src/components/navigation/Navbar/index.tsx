@@ -22,13 +22,13 @@ export const Navbar = () => {
             height={30}
           />
           <Link href="/">
-            <Button className="text-white">Home</Button>
+            <Button className="text-white normal-case">Home</Button>
           </Link>
           <Link href="/technologies">
-            <Button className="text-white">Technologies</Button>
+            <Button className="text-white normal-case">Technologies</Button>
           </Link>
           <Link href="/projects">
-            <Button className="text-white">Projects</Button>
+            <Button className="text-white normal-case">Projects</Button>
           </Link>
         </Box>
       </Toolbar>

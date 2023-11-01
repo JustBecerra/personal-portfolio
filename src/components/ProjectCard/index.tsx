@@ -36,11 +36,19 @@ export const ProjectCard = ({
       <CardActions>
         {url && (
           <Link href={url} target="_blank">
-            <Button>Link</Button>
+            <Button disableTouchRipple disableRipple disableFocusRipple>
+              <Typography className="normal-case text-[#03680b]">
+                Link
+              </Typography>
+            </Button>
           </Link>
         )}
         <Link href={github} target="_blank">
-          <Button>Github</Button>
+          <Button disableTouchRipple disableRipple disableFocusRipple>
+            <Typography className="normal-case text-[#03680b]">
+              Github
+            </Typography>
+          </Button>
         </Link>
       </CardActions>
     </Card>

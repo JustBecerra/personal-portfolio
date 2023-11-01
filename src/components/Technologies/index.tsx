@@ -31,14 +31,10 @@ export const Technologies = ({
                   },
                 },
               ]}
-              className="flex flex-col justify-center items-center bg-transparent border-4 border-white hover:border-[#03680b]"
+              className="flex flex-col justify-center items-center bg-white border-4 border-white hover:border-[#03680b]"
             >
-              <Typography className="text-center text-white mt-4">
-                {tech.name}
-              </Typography>
-              <Typography className="text-center text-white mb-4">
-                {tech.time}
-              </Typography>
+              <Typography className="text-center mt-4">{tech.name}</Typography>
+              <Typography className="text-center mb-4">{tech.time}</Typography>
               <Box className="w-[20%] h-[20%] mb-4">
                 <Image src={tech.icon} alt="" />
               </Box>
