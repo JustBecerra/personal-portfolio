@@ -6,9 +6,11 @@ import Image from "next/image";
 import britishflag from "../../../../public/britishflag.png";
 import spanishflag from "../../../../public/spanishflag.png";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const Navbar = () => {
   const [translate, setTranslate] = useState(false);
+  const t = useTranslations("navbar");
   return (
     <AppBar position="static" className="bg-transparent">
       <Toolbar disableGutters>
@@ -21,13 +23,19 @@ export const Navbar = () => {
             height={30}
           />
           <Link href="/">
-            <Button className="text-white normal-case">Home</Button>
+            <Button className="text-white normal-case">
+              {t("homenavbar")}
+            </Button>
           </Link>
           <Link href="/technologies">
-            <Button className="text-white normal-case">Technologies</Button>
+            <Button className="text-white normal-case">
+              {t("technologiesnavbar")}
+            </Button>
           </Link>
           <Link href="/projects">
-            <Button className="text-white normal-case">Projects</Button>
+            <Button className="text-white normal-case">
+              {t("projectsnavbar")}
+            </Button>
           </Link>
         </Box>
       </Toolbar>
