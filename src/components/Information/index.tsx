@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
@@ -5,7 +6,9 @@ import sonriente from "../../../public/sonriente.jpg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 export const Information = () => {
+  const t = useTranslations("home");
   return (
     <Box className="flex w-[85%] h-auto flex-row justify-center items-center mt-[5%] gap-[10%]">
       <Box className="w-[40%] h-[40%]">
@@ -13,14 +16,13 @@ export const Information = () => {
       </Box>
       <Box className="flex justify-center items-center w-[40%] h-[50%] flex-col gap-[1rem]">
         <Typography className="text-[2.5rem] font-medium text-center">
-          Welcome, I&apos;m Justo Becerra
+          {t("welcome")}
         </Typography>
         <Typography className="text-[1.25rem] text-center">
-          Software engineer with 2 years of experience in developing and
-          maintaining web and mobile applications.
+          {t("intro")}
         </Typography>
         <Typography className="text-[1.25rem] text-center">
-          If you wish to contact me, go ahead and check below
+          {t("ifyouwish")}
         </Typography>
         <Box className="flex flex-row items-center gap-[2rem]">
           <Link href="https://github.com/JustBecerra" target="_blank">

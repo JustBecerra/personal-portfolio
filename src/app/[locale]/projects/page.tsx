@@ -1,7 +1,7 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { Box } from "@mui/material";
-import huellitasSH from "../../../public/huellitasSH.png";
-import caloriecounterSH from "../../../public/caloriecounterSH.png";
+import huellitasSH from "../../../../public/huellitasSH.png";
+import caloriecounterSH from "../../../../public/caloriecounterSH.png";
 import React from "react";
 import {
   calorieCounterDescription,

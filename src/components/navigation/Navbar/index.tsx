@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import { Box, Button, Switch, Toolbar } from "@mui/material";
-import { ButtonNames } from "../../../misc";
 import Image from "next/image";
 import britishflag from "../../../../public/britishflag.png";
 import spanishflag from "../../../../public/spanishflag.png";
