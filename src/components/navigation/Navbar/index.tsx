@@ -4,10 +4,11 @@ import AppBar from "@mui/material/AppBar";
 import {
   Box,
   Button,
+  FormControl,
+  InputLabel,
   MenuItem,
   Select,
   SelectChangeEvent,
-  Switch,
   Toolbar,
 } from "@mui/material";
 import Image from "next/image";
@@ -24,19 +25,41 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   const handleChange = (event: SelectChangeEvent) => {
-    // setLanguage(event.target.value);
+    setLanguage(event.target.value);
     router.push(pathname, { locale: event.target.value });
   };
   return (
     <AppBar position="static" className="bg-transparent">
       <Toolbar disableGutters>
-        <Box className="ml-[3%] w-[100%] flex flex-row gap-x-2">
-          <Select onChange={handleChange} label="Language">
-            <MenuItem value="en">English</MenuItem>
-            <MenuItem value="es">Español</MenuItem>
-          </Select>
+        <Box className="ml-[3%] w-[100%] flex flex-row gap-x-2 items-center">
+          <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel
+              sx={{
+                "&.Mui-focused": {
+                  color: "white",
+                },
+              }}
+              className="text-white focus:text-white"
+            >
+              Language
+            </InputLabel>
+            <Select
+              onChange={handleChange}
+              value={language}
+              label="Language"
+              sx={{
+                "&& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "white",
+                },
+                color: "white",
+              }}
+            >
+              <MenuItem value="en">English</MenuItem>
+              <MenuItem value="es">Español</MenuItem>
+            </Select>
+          </FormControl>
           <Image
-            src={language === "es" ? spanishflag : britishflag}
+            src={language === "en" ? britishflag : spanishflag}
             alt=""
             width={38}
             height={30}
