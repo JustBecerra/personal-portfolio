@@ -1,20 +1,21 @@
+"use client";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Box } from "@mui/material";
-import huellitasSH from "../../../public/huellitasSH.png";
-import caloriecounterSH from "../../../public/caloriecounterSH.png";
+import huellitasSH from "../../../../public/huellitasSH.png";
+import caloriecounterSH from "../../../../public/caloriecounterSH.png";
+import CryptoTrackerSH from "../../../../public/CryptoTrackerSH.png";
 import React from "react";
 import {
-  calorieCounterDescription,
   calorieCounterGitHubURL,
   calorieCounterURL,
-  cryptoTrackerDescription,
   cryptoTrackerGithubURL,
-  huellitasDescription,
   huellitasGithubURL,
   huellitasURL,
 } from "@/misc";
+import { useTranslations } from "next-intl";
 
-export default function projects() {
+export default function Projects() {
+  const t = useTranslations("projects");
   return (
     <main className="flex flex-col h-[90%] items-center justify-center">
       <Box className="w-[80%] flex flex-row justify-center items-center gap-[1rem]">
@@ -22,21 +23,21 @@ export default function projects() {
           title={"Huellitas"}
           screenshot={huellitasSH}
           url={huellitasURL}
-          description={huellitasDescription}
+          description={t("huellitasdescription")}
           github={huellitasGithubURL}
         />
         <ProjectCard
           title={"Crypto Tracker"}
-          screenshot={caloriecounterSH}
+          screenshot={CryptoTrackerSH}
           github={cryptoTrackerGithubURL}
-          description={cryptoTrackerDescription}
+          description={t("cryptotrackerdescription")}
         />
         <ProjectCard
           title={"Calorie Counter"}
           screenshot={caloriecounterSH}
           url={calorieCounterURL}
           github={calorieCounterGitHubURL}
-          description={calorieCounterDescription}
+          description={t("caloriecounterdescription")}
         />
       </Box>
     </main>

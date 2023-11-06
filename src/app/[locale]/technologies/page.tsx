@@ -1,9 +1,12 @@
-import { Technologies } from "@/components/Technologies";
+"use client";
+import { TechnologiesCards } from "@/components/TechnologiesCards";
 import { TechnologiesList } from "@/misc";
 import { Box } from "@mui/material";
+import { useTranslations } from "next-intl";
 import React from "react";
 
-export default function technologies() {
+export default function Technologies() {
+  const t = useTranslations("technologies");
   const frontendTechnologies = TechnologiesList.filter(
     (tech) => tech.area === "frontend"
   );
@@ -13,13 +16,13 @@ export default function technologies() {
   return (
     <main className="flex flex-col items-center justify-center">
       <Box className="w-[80%] mt-[3%] flex flex-row justify-between">
-        <Technologies
+        <TechnologiesCards
           technologies={frontendTechnologies}
-          title="Frontend Technologies"
+          title={t("frontendtech")}
         />
-        <Technologies
+        <TechnologiesCards
           technologies={backendTechnologies}
-          title="Backend Technologies"
+          title={t("backendtech")}
         />
       </Box>
     </main>
