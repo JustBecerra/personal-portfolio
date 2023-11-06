@@ -15,7 +15,7 @@ export default function Technologies() {
   );
   return (
     <main className="flex flex-col items-center justify-center">
-      <Box className="w-[80%] mt-[3%] flex flex-row justify-between">
+      <Box className="md:w-[80%] min-[310px]:w-[100%] mt-[3%] md:gap-0 min-[310px]:gap-6 flex md:flex-row min-[310px]:flex-col md:justify-between md:items-baseline min-[310px]:justify-center min-[310px]:items-center">
         <TechnologiesCards
           technologies={frontendTechnologies}
           title={t("frontendtech")}
