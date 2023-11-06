@@ -3,14 +3,12 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Box } from "@mui/material";
 import huellitasSH from "../../../../public/huellitasSH.png";
 import caloriecounterSH from "../../../../public/caloriecounterSH.png";
+import CryptoTrackerSH from "../../../../public/CryptoTrackerSH.png";
 import React from "react";
 import {
-  calorieCounterDescription,
   calorieCounterGitHubURL,
   calorieCounterURL,
-  cryptoTrackerDescription,
   cryptoTrackerGithubURL,
-  huellitasDescription,
   huellitasGithubURL,
   huellitasURL,
 } from "@/misc";
@@ -30,7 +28,7 @@ export default function Projects() {
         />
         <ProjectCard
           title={"Crypto Tracker"}
-          screenshot={caloriecounterSH}
+          screenshot={CryptoTrackerSH}
           github={cryptoTrackerGithubURL}
           description={t("cryptotrackerdescription")}
         />
