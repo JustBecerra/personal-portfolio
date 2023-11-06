@@ -4,6 +4,7 @@ import AppBar from "@mui/material/AppBar";
 import {
   Box,
   Button,
+  Drawer,
   FormControl,
   IconButton,
   InputLabel,
@@ -24,6 +25,20 @@ export const Navbar = () => {
   const [language, setLanguage] = React.useState("en");
   const [windowWidth, setWindowWidth] = React.useState(0);
   const [isMounted, setIsMounted] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer =
+    (inOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setOpen(inOpen);
+    };
 
   React.useEffect(() => {
     setIsMounted(true);
@@ -102,9 +117,49 @@ export const Navbar = () => {
           </Box>
         ) : (
           isMounted && (
-            <IconButton>
-              <MenuIcon />
-            </IconButton>
+            <>
+              <IconButton onClick={toggleDrawer(true)}>
+                <MenuIcon />
+              </IconButton>
+              <Drawer open={open} onClose={toggleDrawer(false)}>
+                <Box
+                  role="presentation"
+                  onClick={toggleDrawer(false)}
+                  onKeyDown={toggleDrawer(false)}
+                  className="flex flex-col bg-black h-[100%] gap-[1rem]"
+                >
+                  <Select
+                    onChange={handleChange}
+                    value={language}
+                    label="Language"
+                    sx={{
+                      "&& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "white",
+                      },
+                      color: "white",
+                    }}
+                  >
+                    <MenuItem value="en">English</MenuItem>
+                    <MenuItem value="es">Español</MenuItem>
+                  </Select>
+                  <Link href="/">
+                    <Button className="text-white normal-case">
+                      {t("homenavbar")}
+                    </Button>
+                  </Link>
+                  <Link href="/technologies">
+                    <Button className="text-white normal-case">
+                      {t("technologiesnavbar")}
+                    </Button>
+                  </Link>
+                  <Link href="/projects">
+                    <Button className="text-white normal-case">
+                      {t("projectsnavbar")}
+                    </Button>
+                  </Link>
+                </Box>
+              </Drawer>
+            </>
           )
         )}
       </Toolbar>
