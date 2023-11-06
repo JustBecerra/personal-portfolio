@@ -34,7 +34,7 @@ export const Information = () => {
           >
             <LinkedInIcon className="w-[2rem] h-[2rem] rounded-lg shadow-lg hover:shadow-cyan-500" />
           </Link>
-          <Typography className="text-[1.25rem] min-[310px]:text-[0.75rem] font-medium">
+          <Typography className="md:text-[1.5rem] min-[310px]:text-[0.75rem] font-medium">
             justj.becerra@gmail.com
           </Typography>
         </Box>
