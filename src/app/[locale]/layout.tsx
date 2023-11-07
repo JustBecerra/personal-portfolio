@@ -34,11 +34,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Box
-            className="bg-[url('../../../public/night-road.jpg')] bg-no-repeat bg-cover"
-            width="100vw"
-            height="100vh"
-          >
+          <Box className="bg-[url('../../../public/night-road.jpg')] bg-no-repeat bg-cover h-screen w-screen">
             <Navbar />
             {children}
           </Box>
