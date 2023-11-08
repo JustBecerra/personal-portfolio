@@ -16,10 +16,10 @@ import {
 import Image from "next/image";
 import britishflag from "../../../../public/britishflag.png";
 import spanishflag from "../../../../public/spanishflag.png";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import MenuIcon from "@mui/icons-material/Menu";
+import Link from "next-intl/link";
 
 export const Navbar = () => {
   const [language, setLanguage] = React.useState("en");
