@@ -60,7 +60,7 @@ export const TechnologiesCards = ({
                   },
                 },
               ]}
-              className="flex min-[310px]:w-[6rem] md:w-[8rem] md:h-[7rem] min-[310px]:h-[5rem] flex-col justify-center items-center bg-white border-4 border-white hover:border-[#03680b]"
+              className="flex min-[310px]:w-[5rem] md:w-[8rem] md:h-[7rem] min-[310px]:h-[5rem] flex-col justify-center items-center bg-white border-4 border-white hover:border-[#03680b]"
             >
               <Typography className="text-center md:mt-4 min-[310px]:mt-1 md:text-[1rem] min-[310px]:text-[0.75rem]">
                 {tech.name}

@@ -26,12 +26,12 @@ export const ProjectCard = ({
 }: props) => {
   return (
     <Card
-      className="min-[310px]:h-auto md:h-[26rem] flex flex-col justify-between overflow-visible"
+      className="h-auto flex flex-col justify-between overflow-visible"
       variant="outlined"
     >
       <CardContent>
         <Image src={screenshot} alt="" />
-        <Typography className="md:text-[1rem] min-[310px]:text-[0.75rem]">
+        <Typography className="md:text-[1rem] min-[310px]:text-[0.75rem] mt-4">
           {title}
         </Typography>
         <Typography className="mt-4 md:text-[1rem] min-[310px]:text-[0.75rem]">
