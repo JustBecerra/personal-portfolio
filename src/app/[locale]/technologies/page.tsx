@@ -14,8 +14,8 @@ export default function Technologies() {
     (tech) => tech.area === "backend"
   );
   return (
-    <main className="flex flex-col items-center justify-center">
-      <Box className="w-[80%] mt-[3%] flex flex-row justify-between">
+    <main className="flex flex-col items-center justify-center w-screen">
+      <Box className="md:w-[80%] min-[310px]:w-auto min-[310px]:mt-[10%] md:mt-[8%] md:gap-0 min-[310px]:gap-12 flex md:flex-row min-[310px]:flex-col md:justify-between md:items-baseline min-[310px]:justify-center min-[310px]:items-center">
         <TechnologiesCards
           technologies={frontendTechnologies}
           title={t("frontendtech")}

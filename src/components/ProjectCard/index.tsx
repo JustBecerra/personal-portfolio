@@ -25,13 +25,18 @@ export const ProjectCard = ({
   description,
 }: props) => {
   return (
-    <Card className="h-[100%] flex flex-col justify-between" variant="outlined">
+    <Card
+      className="h-auto flex flex-col justify-between overflow-visible"
+      variant="outlined"
+    >
       <CardContent>
         <Image src={screenshot} alt="" />
-        <Box className="mt-2">
-          <Typography>{title}</Typography>
-          <Typography className="mt-4">{description}</Typography>
-        </Box>
+        <Typography className="md:text-[1rem] min-[310px]:text-[0.75rem] mt-4">
+          {title}
+        </Typography>
+        <Typography className="mt-4 md:text-[1rem] min-[310px]:text-[0.75rem]">
+          {description}
+        </Typography>
       </CardContent>
       <CardActions>
         {url && (
