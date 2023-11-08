@@ -17,7 +17,7 @@ import { useTranslations } from "next-intl";
 export default function Projects() {
   const t = useTranslations("projects");
   return (
-    <main className="flex justify-center">
+    <main className="flex justify-center w-screen">
       <Box className="w-[80%] min-[310px]:h-[100%] min-[310px]:mt-8 md:mt-[8%] min-[310px]:pb-6 flex md:flex-row min-[310px]:flex-col gap-[1rem]">
         <ProjectCard
           title={"Huellitas"}
