@@ -16,17 +16,16 @@ import {
 import Image from "next/image";
 import britishflag from "../../../../public/britishflag.png";
 import spanishflag from "../../../../public/spanishflag.png";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "next-intl/client";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next-intl/link";
 
 export const Navbar = () => {
-  const [language, setLanguage] = React.useState("en");
   const [windowWidth, setWindowWidth] = React.useState(0);
   const [isMounted, setIsMounted] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-
+  const currentLocale = useLocale();
   const toggleDrawer =
     (inOpen: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -59,8 +58,7 @@ export const Navbar = () => {
   const pathname = usePathname();
 
   const handleChange = (event: SelectChangeEvent) => {
-    setLanguage(event.target.value);
-    router.push(pathname, { locale: event.target.value });
+    router.replace(pathname, { locale: event.target.value });
   };
   return (
     <AppBar position="static" className="bg-transparent">
@@ -80,7 +78,7 @@ export const Navbar = () => {
               </InputLabel>
               <Select
                 onChange={handleChange}
-                value={language}
+                value={currentLocale}
                 label="Language"
                 sx={{
                   "&& .MuiOutlinedInput-notchedOutline": {
@@ -94,7 +92,7 @@ export const Navbar = () => {
               </Select>
             </FormControl>
             <Image
-              src={language === "en" ? britishflag : spanishflag}
+              src={currentLocale === "en" ? britishflag : spanishflag}
               alt=""
               width={38}
               height={30}
@@ -130,7 +128,7 @@ export const Navbar = () => {
                 >
                   <Select
                     onChange={handleChange}
-                    value={language}
+                    value={currentLocale}
                     label="Language"
                     sx={{
                       "&& .MuiOutlinedInput-notchedOutline": {
