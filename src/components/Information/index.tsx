@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 export const Information = () => {
   const t = useTranslations("home");
   return (
-    <Box className="flex w-[85%] h-auto lg:flex-row min-[310px]:flex-col sm:flex-col justify-center items-center mt-[5%] gap-[10%] min-[310px]:mt-[4rem]">
+    <Box className="flex w-[85%] h-auto lg:flex-row min-[310px]:flex-col sm:flex-col justify-center items-center gap-[10%] my-auto">
       <Box className="w-[40%] h-[40%]">
         <Image src={sonriente} alt="" style={{ borderRadius: "1rem" }} />
       </Box>
