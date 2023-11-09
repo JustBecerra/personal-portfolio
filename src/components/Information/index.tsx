@@ -15,13 +15,13 @@ export const Information = () => {
         <Image src={sonriente} alt="" style={{ borderRadius: "1rem" }} />
       </Box>
       <Box className="flex justify-center items-center md:w-[40%] h-[50%] min-[310px]:w-[80%] flex-col gap-[1rem] min-[310px]:gap-[2rem]">
-        <Typography className="md:text-[2.5rem] min-[310px]:text-[1.25rem] md:whitespace-normal min-[310px]:whitespace-nowrap font-medium text-center min-[310px]:mt-[1rem]">
+        <Typography className="md:!text-[2.5rem] min-[310px]:!text-[1.25rem] md:!whitespace-normal min-[310px]:!whitespace-nowrap !font-medium text-center min-[310px]:mt-[1rem]">
           {t("welcome")}
         </Typography>
-        <Typography className="md:text-[1.25rem] min-[310px]:text-[0.75rem] min-[310px]:w-[100%] text-center">
+        <Typography className="md:!text-[1.25rem] min-[310px]:!text-[0.75rem] min-[310px]:w-[100%] text-center">
           {t("intro")}
         </Typography>
-        <Typography className="md:text-[1.25rem] min-[310px]:text-[0.75rem] min-[310px]:w-[100%] text-center">
+        <Typography className="md:!text-[1.25rem] min-[310px]:!text-[0.75rem] min-[310px]:w-[100%] text-center">
           {t("ifyouwish")}
         </Typography>
         <Box className="flex flex-row items-center gap-[2rem] max-[600px]:w-[100%]">
@@ -34,7 +34,7 @@ export const Information = () => {
           >
             <LinkedInIcon className="w-[2rem] h-[2rem] rounded-lg shadow-lg hover:shadow-cyan-500" />
           </Link>
-          <Typography className="md:text-[1.5rem] min-[310px]:text-[0.75rem] font-medium">
+          <Typography className="md:!text-[1.5rem] min-[310px]:!text-[0.75rem] !font-medium">
             justj.becerra@gmail.com
           </Typography>
         </Box>
