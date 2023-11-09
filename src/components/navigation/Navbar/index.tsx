@@ -61,7 +61,7 @@ export const Navbar = () => {
     router.replace(pathname, { locale: event.target.value });
   };
   return (
-    <AppBar position="static" className="bg-transparent">
+    <AppBar position="static" className="!bg-transparent">
       <Toolbar disableGutters>
         {windowWidth > 620 ? (
           <Box className="ml-[3%] w-[100%] flex flex-row gap-x-2 items-center">
@@ -98,17 +98,17 @@ export const Navbar = () => {
               height={30}
             />
             <Link href="/">
-              <Button className="text-white normal-case">
+              <Button className="!text-white normal-case">
                 {t("homenavbar")}
               </Button>
             </Link>
             <Link href="/technologies">
-              <Button className="text-white normal-case">
+              <Button className="!text-white normal-case">
                 {t("technologiesnavbar")}
               </Button>
             </Link>
             <Link href="/projects">
-              <Button className="text-white normal-case">
+              <Button className="!text-white normal-case">
                 {t("projectsnavbar")}
               </Button>
             </Link>
