@@ -69,10 +69,10 @@ export const Navbar = () => {
               <InputLabel
                 sx={{
                   "&.Mui-focused": {
-                    color: "white",
+                    color: "white !important",
                   },
                 }}
-                className="text-white focus:text-white"
+                className="!text-white"
               >
                 Language
               </InputLabel>
@@ -98,17 +98,17 @@ export const Navbar = () => {
               height={30}
             />
             <Link href="/">
-              <Button className="!text-white normal-case">
+              <Button className="!text-white !normal-case">
                 {t("homenavbar")}
               </Button>
             </Link>
             <Link href="/technologies">
-              <Button className="!text-white normal-case">
+              <Button className="!text-white !normal-case">
                 {t("technologiesnavbar")}
               </Button>
             </Link>
             <Link href="/projects">
-              <Button className="!text-white normal-case">
+              <Button className="!text-white !normal-case">
                 {t("projectsnavbar")}
               </Button>
             </Link>
