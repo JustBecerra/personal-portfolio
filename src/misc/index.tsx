@@ -88,13 +88,8 @@ export const TechnologiesList = [
 
 export const huellitasURL = "https://huellitas.vercel.app/home";
 export const huellitasGithubURL = "https://github.com/cdwenz/huellitas-pg";
-export const huellitasDescription = `Social Media App I created along with teammates from SoyHenry's bootcamp, focused on helping people find lost pets using google maps API and a chat to coordinate with other users.`;
 export const calorieCounterURL = "https://calorie-counter-xi.vercel.app";
 export const calorieCounterGitHubURL =
   "https://github.com/JustBecerra/calorie-counter";
-export const calorieCounterDescription =
-  "App focused on tracking calories by using a US government provided API to control calories consumption and lose or gain weight.";
 export const cryptoTrackerGithubURL =
   "https://github.com/JustBecerra/crypto-tracker";
-export const cryptoTrackerDescription =
-  "Mobile App created with React Native to track the price of the crypto currency you wish with their price updated in real-time.";
