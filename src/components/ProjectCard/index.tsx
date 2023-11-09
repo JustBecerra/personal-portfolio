@@ -30,10 +30,10 @@ export const ProjectCard = ({
     >
       <CardContent>
         <Image src={screenshot} alt="" />
-        <Typography className="md:text-[1rem] min-[310px]:text-[0.75rem] mt-4">
+        <Typography className="md:text-[1rem] min-[310px]:text-[0.75rem] !mt-4">
           {title}
         </Typography>
-        <Typography className="mt-4 md:text-[1rem] min-[310px]:text-[0.75rem]">
+        <Typography className="!mt-4 md:text-[1rem] min-[310px]:text-[0.75rem]">
           {description}
         </Typography>
       </CardContent>

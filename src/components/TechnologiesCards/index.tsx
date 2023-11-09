@@ -32,12 +32,12 @@ export const TechnologiesCards = ({
     };
   }, []);
   return (
-    <Box className="md:w-[40%] md:h-[70%] min-[310px]:w-[90%] h-auto min-[310px]:mx-auto md:0 items-center justify-center">
-      <Typography className="text-center">{title}</Typography>
+    <Box className="md:w-[40%] md:h-[70%] min-[310px]:w-[90%] h-auto min-[310px]:mx-auto items-center justify-center">
+      <Typography className="!text-center">{title}</Typography>
       <Grid
         container
         spacing={8}
-        className="justify-center items-center md:mt-4 min-[310px]:mt-1 md:gap-[2rem] min-[310px]:gap-[0rem]"
+        className="justify-center items-center md:!mt-4 min-[310px]:!mt-1 md:gap-[2rem] min-[310px]:gap-[0rem]"
       >
         {technologies.map((tech, i) => (
           <Grid
