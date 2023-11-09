@@ -62,13 +62,13 @@ export const TechnologiesCards = ({
               ]}
               className="flex min-[310px]:w-[5rem] md:w-[8rem] md:h-[7rem] min-[310px]:h-[5rem] flex-col justify-center items-center bg-white border-4 border-white hover:border-[#03680b]"
             >
-              <Typography className="text-center md:mt-4 min-[310px]:mt-1 md:text-[1rem] min-[310px]:text-[0.75rem]">
+              <Typography className="!text-center md:!mt-4 min-[310px]:!mt-1 md:!text-[1rem] min-[310px]:!text-[0.75rem]">
                 {tech.name}
               </Typography>
-              <Typography className="text-center md:mb-4 min-[310px]:mb-1 md:text-[1rem] min-[310px]:text-xs">
+              <Typography className="!text-center md:!mb-4 min-[310px]:!mb-1 md:!text-[1rem] min-[310px]:!text-xs">
                 {tech.time} {tech.time == 1 ? t("year") : t("years")}
               </Typography>
-              <Box className="w-[20%] h-[20%] md:mb-4 min-[310px]:mb-0">
+              <Box className="w-[20%] h-[20%] md:!mb-4 min-[310px]:!mb-0">
                 <Image src={tech.icon} alt="" />
               </Box>
             </Paper>

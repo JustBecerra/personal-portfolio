@@ -15,7 +15,7 @@ export const Information = () => {
         <Image src={sonriente} alt="" style={{ borderRadius: "1rem" }} />
       </Box>
       <Box className="flex justify-center items-center md:w-[40%] h-[50%] min-[310px]:w-[80%] flex-col gap-[1rem] min-[310px]:gap-[2rem]">
-        <Typography className="md:!text-[2.5rem] min-[310px]:!text-[1.25rem] md:!whitespace-normal min-[310px]:!whitespace-nowrap !font-medium text-center min-[310px]:mt-[1rem]">
+        <Typography className="md:!text-[2.5rem] min-[310px]:!text-[1.25rem] md:!whitespace-normal min-[310px]:!whitespace-nowrap !font-medium text-center min-[310px]:!mt-[1rem]">
           {t("welcome")}
         </Typography>
         <Typography className="md:!text-[1.25rem] min-[310px]:!text-[0.75rem] min-[310px]:w-[100%] text-center">
