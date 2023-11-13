@@ -2,7 +2,8 @@
   "navbar": {
     "homenavbar": "Home",
     "technologiesnavbar": "Technologies",
-    "projectsnavbar": "Projects"
+    "projectsnavbar": "Projects",
+    "language": "Language"
   },
   "home": {
     "welcome": "Welcome, I'm Justo Becerra",

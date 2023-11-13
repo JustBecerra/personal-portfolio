@@ -74,7 +74,7 @@ export const Navbar = () => {
                 }}
                 className="!text-white"
               >
-                Language
+                {t("language")}
               </InputLabel>
               <Select
                 onChange={handleChange}
